@@ -1,0 +1,86 @@
+LIFE WITH AI BINARY LICENSE 1.0
+
+Русская версия является определяющей. Английский перевод ниже предоставлен только для удобства.
+
+Правообладатель: Life with AI
+Официальный сайт: https://life-with-ai.ru
+
+1. Предмет лицензии
+
+Настоящая лицензия распространяется на готовое приложение DataBackups в неизменённом бинарном виде, а также на включённую в официальную поставку документацию (далее — «Приложение»). Исходный код по этой лицензии не предоставляется.
+
+2. Разрешённое использование
+
+Правообладатель предоставляет любому физическому лицу или организации безвозмездное, неисключительное, непередаваемое право:
+
+- скачивать Приложение только из официального GitHub-репозитория проекта либо с официального сайта https://life-with-ai.ru;
+- устанавливать и запускать неизменённое Приложение на принадлежащих пользователю или контролируемых им устройствах;
+- использовать неизменённое Приложение для любых собственных задач, включая внутренние процессы коммерческой организации и создание с его помощью самостоятельных коммерческих результатов;
+- создавать разумно необходимое количество локальных резервных копий исключительно для собственного восстановления и использования.
+
+Разрешение на коммерческое использование результатов работы не является разрешением продавать, лицензировать, распространять или иным образом предоставлять само Приложение третьим лицам.
+
+3. Запрещённые действия
+
+Без отдельного письменного разрешения Правообладателя запрещено:
+
+- изменять, адаптировать, переводить, перерабатывать или создавать производные версии Приложения;
+- продавать, перепродавать, сдавать в аренду, сублицензировать или иным образом извлекать доход из предоставления Приложения третьим лицам;
+- распространять, перепубликовывать, зеркалировать, загружать или размещать копии Приложения на сторонних сайтах, файловых хранилищах, каталогах программ, маркетплейсах, репозиториях, сетях обмена файлами либо иных общедоступных ресурсах;
+- включать Приложение или его части в другой дистрибутив, установщик, программный комплект, образ системы либо услугу, предоставляемую третьим лицам;
+- удалять или изменять уведомления об авторских правах, лицензию, сведения о происхождении либо иные правовые уведомления;
+- обходить технические ограничения или исследовать внутреннее устройство Приложения, кроме случаев и в пределах, прямо допускаемых обязательными нормами применимого законодательства.
+
+4. Официальные источники
+
+Публичные копии Приложения могут размещаться только:
+
+- в официальном GitHub-репозитории, указанном Правообладателем для DataBackups;
+- на официальном сайте https://life-with-ai.ru.
+
+Наличие копии в другом публичном месте не означает её одобрение, подлинность или разрешение Правообладателя на распространение.
+
+5. Права собственности
+
+Приложение предоставляется по лицензии, а не продаётся. Все исключительные права, права на обозначения и иные права, которые прямо не предоставлены настоящей лицензией, сохраняются за Правообладателем и соответствующими правообладателями сторонних компонентов.
+
+6. Сторонние компоненты
+
+Сторонние компоненты, включённые в официальную поставку, регулируются собственными лицензиями. Их тексты и уведомления размещаются в составе поставки. Настоящая лицензия не ограничивает права, предоставленные такими сторонними лицензиями.
+
+7. Отсутствие гарантий
+
+В максимально допустимой применимым законодательством степени Приложение предоставляется «как есть», без явных или подразумеваемых гарантий. Правообладатель не гарантирует отсутствие ошибок, непрерывную работу или пригодность для конкретной цели.
+
+8. Ограничение ответственности
+
+В максимально допустимой применимым законодательством степени Правообладатель не несёт ответственности за косвенные убытки, упущенную выгоду, потерю данных или иные последствия использования либо невозможности использования Приложения. Ничто в настоящем разделе не исключает ответственность, которую нельзя исключить обязательными нормами закона.
+
+9. Прекращение лицензии
+
+При нарушении условий настоящей лицензии предоставленные права прекращаются автоматически. Пользователь обязан прекратить использование и удалить все имеющиеся копии Приложения, кроме копий, сохранение которых обязательно по закону.
+
+10. Полнота условий
+
+Настоящий текст регулирует только предоставление готового бинарного Приложения. Иные права могут быть предоставлены исключительно отдельным письменным разрешением Правообладателя. Если отдельное положение невозможно применить, остальные положения продолжают действовать в максимально допустимом объёме.
+
+Перед первой публичной публикацией конкретного продукта сведения о правообладателе и применимость текста должны быть проверены квалифицированным юристом.
+
+---
+
+ENGLISH INFORMATIONAL TRANSLATION
+
+Copyright holder: Life with AI
+Official website: https://life-with-ai.ru
+
+This license covers the unmodified binary form of DataBackups and the documentation included in its official distribution (the “Application”). Source code is not provided under this license.
+
+Individuals and organizations may download the Application only from its designated official GitHub repository or https://life-with-ai.ru, install and run the unchanged Application on devices they own or control, use it for their own purposes including internal commercial workflows and the creation of independent commercial results, and keep reasonable local backup copies solely for their own recovery and use.
+
+Without separate written permission from Life with AI, users may not modify, adapt, translate, create derivative versions of, sell, resell, rent, sublicense, redistribute, republish, mirror, publicly host, bundle, repackage, or provide the Application to third parties; remove legal or provenance notices; or circumvent technical restrictions or investigate the internal operation of the Application except to the extent expressly permitted by mandatory applicable law.
+
+Public copies may be hosted only in the official GitHub repository designated for DataBackups and on https://life-with-ai.ru. Commercial use of work produced with the Application does not grant permission to commercialize or distribute the Application itself.
+
+The Application is licensed, not sold. Third-party components remain subject to their own licenses. To the maximum extent permitted by applicable law, the Application is provided “as is” without warranty, and Life with AI is not liable for indirect loss, lost profits, loss of data, or other consequences of use or inability to use it. Rights terminate automatically upon breach. Mandatory legal rights and liabilities remain unaffected.
+
+The Russian text controls. This translation is informational only. Before the first public release of a specific product, the copyright-holder details and legal applicability of this text must be reviewed by qualified counsel.

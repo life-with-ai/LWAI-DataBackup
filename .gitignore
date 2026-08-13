@@ -1,0 +1,33 @@
+# Operating system and editor files
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.log
+
+# Local credentials and private data
+.env
+.env.*
+secrets/
+backups/
+inbox/
+
+# Private source, development environments, and generated outputs
+private-source/
+app/
+requirements/
+scripts/
+.runtime/
+.venv/
+node_modules/
+target/
+dist/
+build/
+cache/
+
+# Release binaries belong to GitHub Release assets, not Git history
+*.exe
+*.dll
+*.msi
+*.msix
+*.zip
