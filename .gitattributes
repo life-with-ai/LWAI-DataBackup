@@ -6,6 +6,7 @@
 *.txt text eol=lf
 LICENSE-CASCADIA-CODE.txt -text -whitespace
 LICENSE-INTER.txt -text -whitespace
+THIRD_PARTY_LICENSES.txt text eol=lf -whitespace
 LICENSE-CASCADIA-CODE.txt -text
 LICENSE-INTER.txt -text
 THIRD_PARTY_LICENSES.txt -text
