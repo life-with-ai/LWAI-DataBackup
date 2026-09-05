@@ -1,11 +1,11 @@
 # Third-Party Notices
 
-В portable package включаются только фактически необходимые компоненты. Для каждого поставляемого стороннего файла до принятия Release фиксируются точная версия, лицензия, официальный источник, copyright notices и полный текст лицензии.
+LWAI DataBackup 1.0.0 использует Microsoft .NET Framework и Windows Forms как системную Windows runtime/UI platform. Отдельный runtime в portable ZIP не распространяется.
 
-## Подтверждённый перечень выбранного стека
+Portable package содержит точные тексты SIL Open Font License 1.1 для Cascadia Code и Inter в соответствии с комплектом юридических документов продукта. Бинарные файлы этих шрифтов в package не включены.
 
-| Компонент | Роль | Лицензия | Официальный источник | Совместимость и notices |
-|---|---|---|---|---|
-| Microsoft .NET Framework and Windows Forms | Системная Windows runtime/UI platform и системный build compiler; отдельный runtime в текущую portable-модель не включается. | Microsoft system component terms; компонент проекта не распространяет .NET Framework отдельно | https://learn.microsoft.com/dotnet/framework/ | Системный prerequisite. До первого Release требуется подтвердить точную target framework и clean-machine запуск; notices добавляются только для фактически поставляемых файлов. |
+- Microsoft .NET Framework: https://learn.microsoft.com/dotnet/framework/
+- Cascadia Code: https://github.com/microsoft/cascadia-code
+- Inter: https://github.com/rsms/inter
 
-Перечень подтверждает выбранный стек, но не заявляет фактическое включение компонента в поставку. Перед первой принятой сборкой документ сверяется с фактически поставляемым составом; для каждого компонента фиксируются версия, правообладатель, официальный источник, copyright notices и полный текст лицензии.
+Полный каталог и тексты лицензий: THIRD_PARTY_LICENSES.txt, LICENSE-CASCADIA-CODE.txt, LICENSE-INTER.txt.
