@@ -1,9 +1,14 @@
-LWAI-DataBackup 1.0.0 – THIRD-PARTY LICENSE CATALOG
+LWAI-DataBackup 1.1.0 – THIRD-PARTY LICENSE CATALOG
 
 Microsoft .NET Framework and Windows Forms
 Role: system runtime and UI platform. The runtime is not redistributed in this portable package.
 Official information: https://learn.microsoft.com/dotnet/framework/
 
+Codicons
+
+В интерфейсе используются отдельные SVG-иконки Codicons. Источник: https://github.com/microsoft/vscode-codicons. Лицензия: Creative Commons Attribution 4.0 International.
+
+The interface uses selected Codicons SVG icons. Source: https://github.com/microsoft/vscode-codicons. License: Creative Commons Attribution 4.0 International.
 
 Cascadia Code
 License: SIL Open Font License 1.1
