@@ -1,4 +1,4 @@
-LWAI-DataBackup 1.1.0 – THIRD-PARTY LICENSE CATALOG
+LWAI-DataBackup 1.2.0 – THIRD-PARTY LICENSE CATALOG
 
 Microsoft .NET Framework and Windows Forms
 Role: system runtime and UI platform. The runtime is not redistributed in this portable package.

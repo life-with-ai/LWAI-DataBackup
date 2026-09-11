@@ -1,6 +1,6 @@
 # Third-Party Notices
 
-LWAI DataBackup 1.1.0 использует Microsoft .NET Framework и Windows Forms как системную Windows runtime/UI platform. Отдельный runtime в portable ZIP не распространяется.
+LWAI DataBackup 1.2.0 использует Microsoft .NET Framework и Windows Forms как системную Windows runtime/UI platform. Отдельный runtime в portable ZIP не распространяется.
 
 В интерфейсе используются отдельные SVG-иконки из набора Codicons. Геометрия выбранных иконок сохраняется по официальному источнику; icon font и полный набор SVG в package не включаются.
 

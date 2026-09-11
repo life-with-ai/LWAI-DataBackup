@@ -1,4 +1,4 @@
-# Поддержка Data Backup – Life with AI
+# Поддержка DataBackup – Life with AI
 
 Ошибки и предложения функций принимаются через [GitHub Issues](https://github.com/life-with-ai/LWAI-DataBackup/issues).
 
