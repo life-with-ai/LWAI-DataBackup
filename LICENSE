@@ -1,13 +1,16 @@
-ЛИЦЕНЗИОННОЕ СОГЛАШЕНИЕ LWAI-DATABACKUP
+ЛИЦЕНЗИОННОЕ СОГЛАШЕНИЕ LWAI-DATABACKUP / LWAI-DATABACKUP LICENSE AGREEMENT
 
-Редакция 3.0
-Дата вступления в силу: 23 августа 2026 года
+Редакция соглашения / Agreement version: 3.0
+Версия программы / Software version: 1.5.0
+Дата вступления в силу / Effective date: 23 августа 2026 года / August 23, 2026
 
-Правообладатель и лицензиар: Ерухимович А.Ю., физическое лицо.
-Программа распространяется в рамках проекта «Life with AI / Жизнь с AI».
-Официальный сайт проекта и актуальные способы связи с Правообладателем: https://life-with-ai.ru.
+Правообладатель и лицензиар / Right Holder and Licensor: Ерухимович А.Ю., физическое лицо / an individual.
+Проект / Project: «Life with AI / Жизнь с AI».
+Официальный сайт и актуальные способы связи / Official website and current contact methods: https://life-with-ai.ru.
 
-Copyright © 2026 Ерухимович А.Ю. Все права защищены.
+Copyright © 2026 Ерухимович А.Ю. Все права защищены / All rights reserved.
+
+РУССКАЯ РЕДАКЦИЯ – ОПРЕДЕЛЯЮЩАЯ
 
 1. ОБЩИЕ ПОЛОЖЕНИЯ
 
@@ -82,7 +85,7 @@ Copyright © 2026 Ерухимович А.Ю. Все права защищены
 
 6.1. Программа содержит сторонние компоненты, распространяемые их правообладателями на отдельных условиях. Такие компоненты не подпадают под ограничения настоящего Соглашения в той мере, в которой применимые сторонние лицензии предоставляют Пользователю иные права.
 
-6.2. Перечень компонентов, уведомления и тексты соответствующих лицензий приведены в файлах THIRD_PARTY_NOTICES.md и THIRD_PARTY_LICENSES.txt, поставляемых вместе с Программой или опубликованных в официальном репозитории.
+6.2. Перечень компонентов, уведомления и тексты соответствующих лицензий приведены в файлах THIRD_PARTY_NOTICES.txt и THIRD_PARTY_LICENSES.txt, поставляемых вместе с Программой.
 
 7. ПОЛЬЗОВАТЕЛЬСКИЕ ДАННЫЕ И ОТВЕТСТВЕННОСТЬ ПОЛЬЗОВАТЕЛЯ
 
@@ -142,4 +145,143 @@ Copyright © 2026 Ерухимович А.Ю. Все права защищены
 
 12.4. Если отдельное положение настоящего Соглашения признано недействительным или неисполнимым, остальные положения сохраняют силу. Недействительное или неисполнимое положение применяется в максимально допустимом законом объёме.
 
-12.5. Русская редакция настоящего Соглашения является определяющей. Английский текст, если он предоставлен вместе с Программой, является информационным переводом. При расхождении применяется русская редакция.
+12.5. Русская редакция настоящего Соглашения является определяющей. Английский текст ниже является информационным переводом. При расхождении применяется русская редакция.
+
+ENGLISH INFORMATIONAL TRANSLATION
+
+The Russian text above is the controlling version of this Agreement. The English text below is provided for informational purposes. If the texts differ, the Russian text prevails.
+
+1. GENERAL TERMS
+
+1.1. This License Agreement (the “Agreement”) governs the use of the LWAI-DataBackup software, including its executable files, accompanying documentation, and original visual materials (the “Software”).
+
+1.2. A user means an individual, sole proprietor, or organization that uses the Software (the “User”). If the Software is used on behalf of an organization, the person who begins using it represents that they are authorized to act on behalf of that organization.
+
+1.3. The first launch, copying, or other commencement of use of the Software constitutes the User's full acceptance of this Agreement. If the User does not accept these terms, the User may not use the Software and must delete all copies in the User's possession.
+
+2. LICENSE GRANT
+
+2.1. Subject to compliance with this Agreement, the Right Holder grants the User a limited, non-exclusive, non-transferable, non-sublicensable, and revocable license to use the Software in all countries worldwide.
+
+2.2. The license remains in effect for the entire term of the exclusive right in the applicable version of the Software unless terminated or revoked earlier in accordance with this Agreement and applicable law.
+
+2.3. The Software and the right to use it under this Agreement are provided on a gratuitous basis.
+
+2.4. The User may:
+
+a) download the Software from the Official Sources identified in Section 4;
+
+b) install and run the Software on devices lawfully owned or controlled by the User;
+
+c) use the Software for personal, educational, professional, internal business, and commercial purposes, including in creating the User's own free or commercial materials and products;
+
+d) if the User is an organization or sole proprietor, internally deploy the Software and provide access to employees and contractors solely within the scope of their employment or contractual duties;
+
+e) make technical and backup copies necessary for the permitted downloading, installation, running, internal storage, and recovery of the Software, without transferring such copies outside the User.
+
+2.5. Permitted commercial use of work results does not grant the right to distribute the Software itself, its executable files, or its distribution package.
+
+2.6. No other rights are granted to the User.
+
+3. RESTRICTIONS
+
+3.1. Without the Right Holder's prior written permission, the User may not:
+
+a) copy the Software except as expressly permitted by Section 2;
+
+b) host, upload, publish, mirror, distribute, or offer the Software or its distribution package for download on third-party websites, repositories, application stores, file-sharing networks, cloud storage, physical media, or through any other unofficial channel, including without modification and free of charge;
+
+c) sell, resell, rent, lease, lend, sublicense, or otherwise transfer the Software to third parties, except for internal use by the User's employees and contractors as expressly permitted by Section 2.4;
+
+d) include the Software or its distribution package in another software product, installer, archive, distribution bundle, or service intended for transfer to third parties;
+
+e) modify, adapt, translate, patch, transform, or create derivative versions of the Software, its code, executable files, documentation, or original visual materials;
+
+f) replace or add proprietary logos, names, trademarks, or other identifiers in the Software, rebrand the Software, remove, conceal, or alter copyright, license, or other proprietary notices, or represent the Software as the User's own product;
+
+g) reverse engineer, decompile, disassemble, or otherwise attempt to obtain the source code or internal structure of the Software, except and only to the extent expressly permitted by applicable law and incapable of being excluded by agreement;
+
+h) use the Software in any manner that violates applicable law or third-party rights.
+
+4. OFFICIAL SOURCES AND INFORMATIONAL PUBLICATIONS
+
+4.1. The Official Sources of the Software are:
+
+- the official “Life with AI / Жизнь с AI” project website: https://life-with-ai.ru;
+- the official LWAI-DataBackup repository and its Releases page: https://github.com/life-with-ai/LWAI-DataBackup.
+
+4.2. Truthful informational publications, reviews, news, instructions, and demonstrations concerning LWAI-DataBackup are permitted. The LWAI-DataBackup name, screenshots, interface videos, and unmodified original visual materials may be used solely to identify and illustrate the Software.
+
+4.3. Such publication must include a direct accessible link to the official website at https://life-with-ai.ru, must not imply an official partnership, endorsement, or representation, and does not permit hosting or otherwise making the Software distribution package available for download.
+
+5. RIGHTS IN THE SOFTWARE AND MATERIALS
+
+5.1. The Software is licensed, not sold. All exclusive rights in the Software remain with the Right Holder. This Agreement does not transfer ownership, exclusive rights, trademark rights, or any rights other than those expressly granted in Section 2.
+
+5.2. Documentation and original visual materials created for the Software belong to the Right Holder of this software. Rights in third-party components, materials, and designations belong to their respective right holders.
+
+6. THIRD-PARTY COMPONENTS
+
+6.1. The Software contains third-party components distributed by their respective right holders under separate terms. Such components are not subject to the restrictions of this Agreement to the extent that the applicable third-party licenses grant the User different rights.
+
+6.2. The components, notices, and applicable license texts are listed in THIRD_PARTY_NOTICES.txt and THIRD_PARTY_LICENSES.txt supplied with the Software.
+
+7. USER DATA AND USER RESPONSIBILITY
+
+7.1. The User independently selects the data, files, directories, settings, and other materials used with the Software, determines whether access to them is lawful, and decides whether to perform each operation.
+
+7.2. The Software processes data and performs operations only as a result of an action by the User or the operation of a feature that the User has explicitly enabled and configured.
+
+7.3. Before using the Software with important data or sole existing copies of files, the User must create independent backup copies where applicable, verify that recovery is possible, and test the intended scenario under safe conditions.
+
+7.4. The User is solely responsible for the content of processed data, lawful access to it, selected settings, destinations, verification of the resulting output, and the consequences of its further use or transfer to third parties.
+
+7.5. Use of the Software does not relieve the User of independently verifying results, controlling access rights, maintaining an adequate backup strategy, and applying other measures appropriate to the nature and criticality of the User's task.
+
+8. VERSIONS, UPDATES, AND CHANGES
+
+8.1. Each version of the Software is provided under the version of this Agreement that accompanies it.
+
+8.2. The release of a new Software version or a new version of this Agreement does not by itself change the terms governing a previously lawfully obtained version. Use of a new Software version is governed by the version of this Agreement supplied with it.
+
+8.3. The Right Holder may release updates, change functionality, and discontinue the distribution or support of individual Software versions. This alone does not terminate a previously granted license unless that license is terminated or revoked in accordance with Section 11.
+
+9. DISCLAIMER OF WARRANTIES
+
+9.1. The Software is provided “as is” and “as available.”
+
+9.2. To the extent permitted by applicable law, the Right Holder disclaims all express, implied, and statutory warranties and does not warrant that the Software will operate continuously or without errors, meet the User's individual requirements, preserve or recover data, or be compatible with all data, formats, software, or hardware configurations.
+
+9.3. The User is solely responsible for evaluating whether the Software is suitable for the User's purposes and must test it under safe conditions before using it with critical data.
+
+10. LIMITATION OF LIABILITY
+
+10.1. To the maximum extent permitted by applicable law, the Right Holder is not liable for loss, damage, overwriting, or inability to recover data; unexpected operation results; incompatibility with third-party software; lost profits; downtime; or any other direct or indirect consequences of using or being unable to use the Software.
+
+10.2. The Right Holder is not liable for actions taken by the User with the Software, including selecting data, settings, and destinations; starting operations; verifying results; and saving, deleting, copying, or transferring information.
+
+10.3. Nothing in this Agreement excludes or limits liability that cannot be excluded or limited under applicable law.
+
+11. TERMINATION AND REVOCATION OF THE LICENSE
+
+11.1. If the User breaches this Agreement, the license granted to that User terminates automatically without separate notice.
+
+11.2. To the extent permitted by applicable law, the Right Holder may revoke the granted license in whole or in part. A revocation notice will be posted in the legal information section of the official website at https://life-with-ai.ru and must identify the Software and affected versions, the scope of the revocation, its effective date, and the actions required from the User.
+
+11.3. Unless the notice specifies a later date, the revocation takes effect 30 calendar days after the notice is published. In the event of a breach of this Agreement, a need to comply with law, protect third-party rights, or address a material security risk, the notice may specify an earlier effective date to the extent permitted by applicable law.
+
+11.4. After termination or the effective date of a revocation, the User must cease using the Software to the affected extent and delete the corresponding copies, except for materials that must be retained by law.
+
+11.5. Termination or revocation does not affect provisions concerning rights in the Software, limitation of liability, applicable law, or any other provisions that by their nature continue to apply after use of the Software ends.
+
+12. APPLICABLE LAW AND FINAL PROVISIONS
+
+12.1. This Agreement and relations arising from the use of the Software are governed by the laws of the Russian Federation.
+
+12.2. The choice of applicable law does not restrict mandatory provisions of law that apply to the User regardless of the terms of this Agreement.
+
+12.3. Disputes shall be heard by a court of competent jurisdiction in accordance with applicable procedural law.
+
+12.4. If any provision of this Agreement is held invalid or unenforceable, the remaining provisions remain in effect. The invalid or unenforceable provision shall apply to the maximum extent permitted by law.
+
+12.5. The Russian version of this Agreement is controlling. This English text is an informational translation. If the texts differ, the Russian version prevails.

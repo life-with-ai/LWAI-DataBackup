@@ -1,17 +1,31 @@
-# Политика безопасности
+# Безопасность / Security
 
-## Поддерживаемые версии
+[Русский](#русский) | [English](#english)
 
-| Версия | Статус |
-|---|---|
-| 1.4.0 | Поддерживается |
+## Русский
 
-## Сообщение об уязвимости
+### Поддерживаемая версия
 
-Используй [GitHub Private Vulnerability Reporting](https://github.com/life-with-ai/LWAI-DataBackup/security/advisories/new). Не публикуй сведения об уязвимости в обычном Issue или Discussion до завершения согласованного раскрытия.
+Поддерживаемая версия: `1.5.0`.
 
-В сообщении укажи версию приложения, версию и архитектуру Windows, наблюдаемое поведение, потенциальное воздействие, безопасную последовательность воспроизведения и результат проверки на синтетических данных.
+### Сообщение об уязвимости
 
-Не прикладывай реальные документы, персональные данные, приватные каталоги, токены или ключи.
+Направляйте сообщения через [GitHub Private Vulnerability Reporting](https://github.com/life-with-ai/LWAI-DataBackup/security/advisories/new). Не публикуйте сведения об уязвимости в открытом Issue или Discussion до завершения согласованного раскрытия.
 
-Не отправляй архивы резервных копий, конфигурации или другие пользовательские файлы. Проверка выполняется на синтетических данных и официальном дистрибутиве соответствующей версии.
+Укажите версию LWAI-DataBackup, версию и архитектуру Windows, наблюдаемое поведение, потенциальное воздействие, безопасную последовательность воспроизведения и результат проверки на синтетических данных. Не прикладывайте реальные документы, персональные данные, приватные каталоги, токены или ключи.
+
+Не отправляйте архивы резервных копий, конфигурации или другие пользовательские файлы. Проверка выполняется на синтетических данных и официальном дистрибутиве соответствующей версии.
+
+## English
+
+### Supported version
+
+Supported version: `1.5.0`.
+
+### Reporting a vulnerability
+
+Report vulnerabilities through [GitHub Private Vulnerability Reporting](https://github.com/life-with-ai/LWAI-DataBackup/security/advisories/new). Do not disclose a vulnerability in a public Issue or Discussion before coordinated disclosure is complete.
+
+Include the LWAI-DataBackup version, Windows version and architecture, observed behavior, potential impact, safe reproduction steps, and the result of testing with synthetic data. Do not attach real documents, personal data, private directories, tokens, or keys.
+
+Do not send backup archives, configuration files, or other user files. Verification is performed with synthetic data and the official distribution for the relevant version.

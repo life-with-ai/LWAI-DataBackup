@@ -1,99 +1,117 @@
-# DataBackup – Life with AI
+# DataBackup – Life with AI 1.5.0
 
-LWAI DataBackup 1.4.0 – локальное portable Windows-приложение для резервного копирования проектов и рабочих документов: профили заданий, файловое копирование, ZIP-архивация, настройка исключений, прогресс и журнал операций.
+[Русский](#русский) | [English](#english)
 
-## Скачать
+## Русский
 
-Официальные assets версии:
+`LWAI-DataBackup` – локальное portable Windows-приложение для копирования или ZIP-архивации выбранной папки с управляемыми исключениями, профилями заданий и проверкой результата.
 
-- LWAI-DataBackup-1.4.0-windows-x64-portable.zip;
-- LWAI-DataBackup-1.4.0-windows-x64-portable.zip.sha256.
+### Скачать и запустить
 
-Скачивай оба файла на странице [GitHub Releases](https://github.com/life-with-ai/LWAI-DataBackup/releases), сверяй SHA-256, распаковывай ZIP в отдельную папку и запускай LWAI-DataBackup.exe.
+- Portable ZIP: `LWAI-DataBackup-1.5.0-windows-x64-portable.zip`.
+- Контрольная сумма публикуется в [release-information/v1.5.0.md](release-information/v1.5.0.md).
+- Распакуйте ZIP в отдельную папку и запустите `LWAI-DataBackup.exe`. Установка не требуется.
+- EXE не имеет цифровой подписи. Windows может показать стандартное предупреждение для загруженного приложения.
 
-EXE не имеет цифровой подписи. Windows может показать стандартное предупреждение для загруженного приложения.
+Профили и глобальные настройки хранятся в `data-backups.config.json` рядом с EXE. Файл из дистрибутива не содержит пользовательских путей или пользовательских профилей.
 
-## Основные возможности
+### Профили и глобальные настройки
 
-- создание, выбор, переименование, удаление и упорядочивание локальных профилей заданий;
-- создание пустого профиля либо профиля на основе сохранённых настроек существующего профиля;
-- ручное сохранение профиля и дополнительное автосохранение;
-- восстановление последнего выбранного профиля при следующем запуске;
-- файловое копирование проекта или создание ZIP-архива;
-- единый шаблон имени `<проект>-ГГГГ-ММ-ДД-ЧЧММСС` и безопасные суффиксы `-2`, `-3` при совпадении;
+- Каждый профиль хранит источник, назначение, режим copy или ZIP, исключения и дополнительные опции.
+- Профиль можно создать пустым либо на основе сохранённых настроек существующего профиля, выбрать, переименовать, удалить и переместить в списке.
+- Последний выбранный профиль восстанавливается при следующем запуске.
+- Команда `Сохранить профиль` записывает активный профиль вручную.
+- Дополнительное автосохранение записывает текст после потери фокуса либо через 5 секунд после последнего изменения, а режим и опции – после выбора.
+- Окно `Настройки` управляет темой, языком, автосохранением и отображением дополнительных параметров.
+- Светлая и тёмная темы применяются ко всем проектным поверхностям.
+- Русский и английский интерфейс переключается сразу; пользовательские пути и имена профилей не переводятся.
+
+### Резервное копирование
+
+- копирование выбранной папки в отдельный каталог;
+- создание ZIP-архива;
 - исключение папок и файлов по wildcard-маскам до обхода исключённого содержимого;
 - отдельное управление включением папок `backup` и `backups`;
 - предварительный подсчёт файлов и объёма, прогресс, текущий этап и структурированный журнал;
 - предупреждение о путях, превышающих стандартный предел Windows, до создания результата;
 - отмена операции либо явное продолжение без перечисленных объектов;
 - отдельный итог с пропусками и количеством пропущенных файлов и каталогов;
-- открытие готового результата и очистка только отображаемого журнала;
-- сохранение допустимых размеров и положения окна, стандартная максимизация и список горячих клавиш;
-- отключённый по умолчанию технический журнал одной сессии приложения.
+- временный результат `.tmp` и готовое имя только после успешной проверки.
 
-## Системные требования
+### Системные требования
 
-- проверенные системы: Windows 8.1 x64 и Windows 10 x64;
-- совместимый установленный .NET Framework;
-- запись в portable-папку и назначение, чтение выбранного источника;
+- 64-разрядная Windows с совместимым установленным .NET Framework;
+- права чтения для источника и записи для назначения и portable-папки;
 - исходный и целевой пути в пределах стандартных ограничений используемой версии Windows.
 
-## Защита исходных данных
+Фактически проверенная матрица систем указывается в [release-information/v1.5.0.md](release-information/v1.5.0.md).
 
-Приложение использует источник только для чтения и не выполняет в нём операции создания, изменения, перемещения или удаления. Эта гарантия относится к действиям самого приложения, а не к Windows, оборудованию или сторонним процессам.
+### Защита исходных данных
 
-Перед запуском:
+Приложение использует источник только для чтения и не создаёт, не изменяет, не перемещает и не удаляет в нём объекты. Source и destination не могут совпадать, destination не может находиться внутри source, а опасные reparse-компоненты и перезапись существующего результата блокируются до записи.
 
-- source и destination не могут совпадать;
-- destination не может находиться внутри source;
-- source внутри обычного destination допустим только при размещении результата вне source;
-- junction, symbolic link и другие reparse-компоненты source, destination и путей данных приложения отклоняются;
-- существующий готовый результат не перезаписывается.
+Во время операции приложение повторно проверяет прочитанные данные. Изменение, исчезновение, блокировка или неполное чтение обязательного файла прекращает задание без готового результата.
 
-Во время операции приложение проверяет прочитанные данные и повторно сопоставляет состояние источника. Изменение, исчезновение, блокировка или неполное чтение обязательного файла прекращает задание без готового результата. Перед резервным копированием останови внешние изменения source другими приложениями и пользователями.
+### Приватность, поддержка и лицензия
 
-## Длинные пути и пропуски
+Приложение работает локально без телеметрии, внешнего API, облачной синхронизации, серверной проверки лицензии и внешнего crash-reporting.
 
-До создания результата приложение выявляет файлы и каталоги, полный путь которых превышает стандартный предел Windows. Предупреждение показывает точный путь и минимальное число символов, на которое его нужно сократить.
+Подробности: [PRIVACY.md](PRIVACY.md), [SECURITY.md](SECURITY.md), [SUPPORT.md](SUPPORT.md), [LICENSE](LICENSE) и [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-Можно отменить операцию, изменить исходный путь, выбрать более короткую папку назначения или исключить проблемный каталог. Команда `Продолжить с пропусками` создаёт и проверяет результат без перечисленных объектов. Такой итог обозначается отдельно и содержит количество пропущенных файлов и каталогов.
+## English
 
-## Остановка и `.tmp`
+`LWAI-DataBackup` is a local portable Windows application for copying a selected folder or creating a ZIP archive with configurable exclusions, task profiles, and result verification.
 
-Незавершённая файловая копия или ZIP хранится под уникальным именем `.tmp`. Готовое имя появляется только после полной проверки результата.
+### Download and run
 
-`Остановить` завершает текущее задание, а не ставит его на паузу. При обработанной отмене приложение удаляет только собственный `.tmp`. Следующий `Старт` очищает рабочее состояние, заново анализирует актуальный source и начинает операцию сначала.
+- Portable ZIP: `LWAI-DataBackup-1.5.0-windows-x64-portable.zip`.
+- The checksum is published in [release-information/v1.5.0.md](release-information/v1.5.0.md).
+- Extract the ZIP to a separate folder and run `LWAI-DataBackup.exe`. No installation is required.
+- The EXE is not digitally signed. Windows may display its standard warning for a downloaded application.
 
-Аварийное завершение процесса, Windows или питания может оставить `.tmp` в destination. Приложение не продолжает и не удаляет такой остаток в новой сессии; его можно проверить и удалить вручную, затем запустить задание заново.
+Profiles and global settings are stored in `data-backups.config.json` next to the EXE. The distributed file contains no user paths or user profiles.
 
-## Исключения и журнал
+### Profiles and global settings
 
-Новая чистая конфигурация содержит рекомендуемые исключения распространённых окружений, временных каталогов, build-output и служебных файлов. Существующий config сохраняет пользовательские списки и их порядок без автоматического дополнения.
+- Each profile stores the source, destination, copy or ZIP mode, exclusions, and additional options.
+- A profile can be created empty or from the saved settings of an existing profile, selected, renamed, deleted, and reordered.
+- The last selected profile is restored the next time the application starts.
+- The `Save profile` command writes the active profile manually.
+- Optional autosave writes text after focus leaves a field or 5 seconds after the last edit, while mode and options are saved after selection.
+- The `Settings` dialog controls theme, language, autosave, and the visibility of additional options.
+- Light and dark themes apply to all project-owned surfaces.
+- The Russian and English interfaces switch immediately; user paths and profile names are not translated.
 
-Опция `Включать папки backups` управляет точными папками `backup` и `backups`. При включении маска `*.zip` игнорируется только внутри этих папок; остальные исключения продолжают действовать.
+### Backup features
 
-Технический журнал по умолчанию выключен. После включения он сохраняется в `logs` рядом с EXE, может содержать пути и имена файлов и автоматически не удаляется. Команда очистки журнала в окне очищает только отображение.
+- copy a selected folder into a separate directory;
+- create a ZIP archive;
+- exclude directories and files with wildcard patterns before excluded content is traversed;
+- control inclusion of the `backup` and `backups` directories separately;
+- calculate file count and size in advance and show progress, current stage, and a structured log;
+- warn about paths that exceed the standard Windows limit before creating a result;
+- cancel the operation or explicitly continue without the listed objects;
+- report a distinct completed-with-skips result with skipped file and directory counts;
+- keep an incomplete result as `.tmp` and publish the final name only after successful verification.
 
-## Профили и сохранение
+### System requirements
 
-Профиль хранит источник, назначение, режим copy или ZIP, оба списка исключений и дополнительные опции. Профиль `По умолчанию` можно редактировать, но нельзя удалить или переименовать. Новый профиль создаётся пустым либо получает сохранённые настройки выбранного существующего профиля.
+- 64-bit Windows with a compatible installed .NET Framework;
+- read access to the source and write access to the destination and portable folder;
+- source and destination paths within the standard limits of the Windows version in use.
 
-В ручном режиме команда `Сохранить настройки` записывает только активный профиль. `Старт` использует видимые настройки задания, но не сохраняет профиль автоматически.
+The verified operating system matrix is provided in [release-information/v1.5.0.md](release-information/v1.5.0.md).
 
-Автосохранение включается отдельно в меню `Файл`. Изменённое текстовое поле сохраняется после потери фокуса либо через 5 секунд после последнего изменения; режим и checkbox-опции сохраняются после выбора. Таймер работает только при наличии несохранённых изменений. Последний выбранный профиль восстанавливается при следующем запуске.
+### Source data protection
 
-При первом успешном сохранении прежняя конфигурация версии 1.3.0 переносится в профиль `По умолчанию` с сохранением путей, режима, исключений и опций.
+The application uses the source for reading only and does not create, modify, move, or delete objects in it. Source and destination cannot be the same, destination cannot be inside source, and unsafe reparse components and overwriting an existing result are blocked before writing.
 
-## Приватность
+During an operation, the application verifies the data it reads again. A required file that changes, disappears, becomes locked, or cannot be read completely ends the task without publishing a completed result.
 
-Приложение работает локально без телеметрии, внешнего API, облачной синхронизации, серверной проверки лицензии и внешнего crash-reporting. Сетевой путь используется только по прямому выбору пользователя в пределах файловых разрешений Windows; отдельная совместимость с сетевыми хранилищами не заявляется.
+### Privacy, support, and license
 
-Подробности: [PRIVACY.md](PRIVACY.md), [SECURITY.md](SECURITY.md), [SUPPORT.md](SUPPORT.md).
+The application works locally without telemetry, an external API, cloud synchronization, server-side license checks, or external crash reporting.
 
-## Лицензия
-
-Приложение можно бесплатно использовать в личных, профессиональных и коммерческих целях. Распространение, стороннее размещение дистрибутива, перепродажа, передача третьим лицам, модификация и ребрендинг запрещены. Полные условия: [LICENSE](LICENSE).
-
-Сторонние сведения: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+See [PRIVACY.md](PRIVACY.md), [SECURITY.md](SECURITY.md), [SUPPORT.md](SUPPORT.md), [LICENSE](LICENSE), and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 Life with AI – [life-with-ai.ru](https://life-with-ai.ru)

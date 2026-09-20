@@ -1,5 +1,23 @@
 # Changelog
 
+[Русский](#русский) | [English](#english)
+
+## Русский
+
+### 1.5.0
+
+#### Добавлено
+
+- Светлая и тёмная темы приложения.
+- Русский и английский интерфейс с сохранением выбранного языка.
+- Единое окно глобальных настроек для темы, языка, автосохранения и отображения дополнительных параметров.
+
+#### Изменено
+
+- Переключение темы и языка применяется сразу к открытому главному окну и проектным диалогам.
+- Команда ручного сохранения активного профиля называется `Сохранить профиль`.
+- Автосохранение настраивается в окне глобальных настроек.
+
 ## 1.4.0
 
 ### Добавлено
@@ -91,3 +109,19 @@
 - Отображение прогресса, текущего файла и журнала операции.
 - Сохранение локальных настроек рядом с portable EXE.
 - Открытие результата после завершения операции.
+
+## English
+
+### 1.5.0
+
+#### Added
+
+- Light and dark application themes.
+- Russian and English interfaces with persistence of the selected language.
+- One global settings dialog for theme, language, autosave, and the visibility of additional options.
+
+#### Changed
+
+- Theme and language changes are applied immediately to the open main window and project dialogs.
+- The command for manually saving the active profile is named `Save profile`.
+- Autosave is configured in the global settings dialog.
