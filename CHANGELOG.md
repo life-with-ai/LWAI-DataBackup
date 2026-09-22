@@ -4,6 +4,18 @@
 
 ## Русский
 
+### 1.6.0
+
+#### Изменено
+
+- Проверка доступности исходной и целевой папок выполняется только для текущего задания после нажатия `Старт` и не блокирует интерфейс во время ожидания сетевого пути.
+- Сохранение профилей, глобальных настроек и положения окна больше не проверяет доступность записанных исходных папок.
+- Файл профилей и глобальных настроек теперь называется `config.json`.
+
+#### Исправлено
+
+- Клавиши ← и → в поле имени нового профиля перемещают текстовый курсор и не переключают сохранённые профили.
+
 ### 1.5.0
 
 #### Добавлено
@@ -111,6 +123,18 @@
 - Открытие результата после завершения операции.
 
 ## English
+
+### 1.6.0
+
+#### Changed
+
+- Source and destination availability is checked only for the current task after `Start`, without blocking the interface while a network path responds.
+- Saving profiles, global settings, and window position no longer checks whether stored source folders are available.
+- The profiles and global settings file is now named `config.json`.
+
+#### Fixed
+
+- The ← and → keys move the text cursor in the new profile name field instead of switching saved profiles.
 
 ### 1.5.0
 

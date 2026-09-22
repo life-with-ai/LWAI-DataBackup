@@ -17,7 +17,7 @@
 - правила исключения, выбранный режим copy или ZIP и другие параметры операции;
 - глобальные настройки темы, языка, автосохранения и отображения дополнительных параметров;
 - технический журнал хода и результата операции;
-- локальные профили и настройки рядом с EXE в `data-backups.config.json`.
+- локальные профили и настройки рядом с EXE в `config.json`.
 
 ### Локальное хранение и передача
 
@@ -44,7 +44,7 @@ Effective date: August 13, 2026.
 - exclusion rules, the selected copy or ZIP mode, and other operation settings;
 - global theme, language, autosave, and additional-options visibility settings;
 - the technical log of operation progress and results;
-- local profiles and settings stored next to the EXE in `data-backups.config.json`.
+- local profiles and settings stored next to the EXE in `config.json`.
 
 ### Local storage and transfer
 

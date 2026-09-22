@@ -6,7 +6,7 @@
 
 ### Поддерживаемая версия
 
-Поддерживаемая версия: `1.5.0`.
+Поддерживаемая версия: `1.6.0`.
 
 ### Сообщение об уязвимости
 
@@ -20,7 +20,7 @@
 
 ### Supported version
 
-Supported version: `1.5.0`.
+Supported version: `1.6.0`.
 
 ### Reporting a vulnerability
 

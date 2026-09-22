@@ -1,117 +1,185 @@
-# DataBackup – Life with AI 1.5.0
+# DataBackup – Life with AI 1.6.0
 
 [Русский](#русский) | [English](#english)
 
 ## Русский
 
-`LWAI-DataBackup` – локальное portable Windows-приложение для копирования или ZIP-архивации выбранной папки с управляемыми исключениями, профилями заданий и проверкой результата.
+### Назначение
 
-### Скачать и запустить
+Резервное копирование проектов и рабочих документов в виде обычной файловой копии или ZIP-архива. Для каждого проекта или сценария можно создать отдельный профиль и сохранить в нём пути к исходным данным и месту размещения резервной копии, формат результата, исключения и дополнительные параметры.
 
-- Portable ZIP: `LWAI-DataBackup-1.5.0-windows-x64-portable.zip`.
-- Контрольная сумма публикуется в [release-information/v1.5.0.md](release-information/v1.5.0.md).
-- Распакуйте ZIP в отдельную папку и запустите `LWAI-DataBackup.exe`. Установка не требуется.
-- EXE не имеет цифровой подписи. Windows может показать стандартное предупреждение для загруженного приложения.
+### Быстрый старт
 
-Профили и глобальные настройки хранятся в `data-backups.config.json` рядом с EXE. Файл из дистрибутива не содержит пользовательских путей или пользовательских профилей.
+1. Распакуйте ZIP-архив с LWAI-DataBackup на рабочий стол или в другую папку, в которой ваша учётная запись Windows имеет права на запись.
+2. Откройте распакованную папку и запустите LWAI-DataBackup.exe. LWAI-DataBackup работает в portable-режиме и не требует установки.
+3. Укажите пути к исходным данным и папке, в которой будет сохранена резервная копия. Выберите обычную файловую копию или ZIP-архив, при необходимости настройте исключения и нажмите «Старт».
 
-### Профили и глобальные настройки
+Для первого запуска рекомендуется использовать рабочий стол или другую пользовательскую папку. Размещение в защищённой системной папке может ограничить сохранение профилей, настроек и технического журнала.
 
-- Каждый профиль хранит источник, назначение, режим copy или ZIP, исключения и дополнительные опции.
-- Профиль можно создать пустым либо на основе сохранённых настроек существующего профиля, выбрать, переименовать, удалить и переместить в списке.
-- Последний выбранный профиль восстанавливается при следующем запуске.
-- Команда `Сохранить профиль` записывает активный профиль вручную.
-- Дополнительное автосохранение записывает текст после потери фокуса либо через 5 секунд после последнего изменения, а режим и опции – после выбора.
-- Окно `Настройки` управляет темой, языком, автосохранением и отображением дополнительных параметров.
-- Светлая и тёмная темы применяются ко всем проектным поверхностям.
-- Русский и английский интерфейс переключается сразу; пользовательские пути и имена профилей не переводятся.
+EXE не имеет цифровой подписи. При первом запуске Windows может показать стандартное предупреждение для загруженного файла.
+
+### Профили и настройки
+
+В отдельном профиле сохраняются пути к исходным данным и месту размещения резервной копии, формат результата, правила исключений и дополнительные параметры. Профили можно создавать, переименовывать, удалять и располагать в удобном порядке. Последний выбранный профиль восстанавливается при следующем запуске.
+
+Профили и настройки LWAI-DataBackup хранятся в config.json рядом с EXE. В этом файле также сохраняются тема, язык, режим автосохранения, отображение дополнительных параметров и положение окна. Входящий в дистрибутив config.json не содержит пользовательских путей или пользовательских профилей.
+
+По умолчанию используется ручное сохранение командой «Сохранить профиль». При необходимости в окне «Настройки» можно включить автосохранение. Изменения текста записываются после выхода из поля либо через 5 секунд после последнего ввода; переключатели и параметры сохраняются сразу после выбора.
+
+### Совместимость конфигурации
+
+Конфигурация версии 1.5.0 совместима с версией 1.6.0. Чтобы перенести её, скопируйте data-backups.config.json из portable-папки версии 1.5.0 в portable-папку версии 1.6.0 и переименуйте копию в config.json.
 
 ### Резервное копирование
 
-- копирование выбранной папки в отдельный каталог;
-- создание ZIP-архива;
-- исключение папок и файлов по wildcard-маскам до обхода исключённого содержимого;
-- отдельное управление включением папок `backup` и `backups`;
-- предварительный подсчёт файлов и объёма, прогресс, текущий этап и структурированный журнал;
-- предупреждение о путях, превышающих стандартный предел Windows, до создания результата;
-- отмена операции либо явное продолжение без перечисленных объектов;
-- отдельный итог с пропусками и количеством пропущенных файлов и каталогов;
-- временный результат `.tmp` и готовое имя только после успешной проверки.
+Доступны следующие возможности:
+
+- создание обычной файловой копии или ZIP-архива;
+- отдельные списки исключаемых папок, файлов и wildcard-масок для каждого профиля;
+- отдельное управление включением папок backup и backups;
+- предварительный подсчёт файлов и объёма с отображением прогресса, текущего этапа и журнала операции;
+- предупреждение о слишком длинных путях до создания результата;
+- отмена операции либо продолжение без объектов, перечисленных в предупреждении;
+- отдельный итог для полностью завершённой операции и операции с пропусками;
+- контроль уникальности имени результата с автоматическим добавлением безопасного суффикса при совпадении.
+
+### Сохранность исходных данных
+
+LWAI-DataBackup использует исходные данные исключительно в режиме чтения.
+
+Доступность исходных данных и папки для резервной копии проверяется только для выбранного профиля после нажатия «Старт». Ожидание ответа сетевого пути не блокирует интерфейс.
+
+Результат сначала создаётся под временным именем и получает окончательное имя только после успешной проверки. При штатной отмене незавершённый временный результат удаляется. Аварийное завершение процесса, Windows или питания может оставить временный объект только в папке резервной копии. Такой объект не продолжается автоматически, поэтому операцию следует запустить заново.
+
+### Технический журнал
+
+Фиксация событий в техническом журнале по умолчанию отключена. Её можно включить в дополнительных параметрах профиля. Записи сохраняются в папке logs рядом с EXE и могут содержать пути и имена файлов. Содержимое резервируемых файлов в журнал не записывается.
 
 ### Системные требования
 
-- 64-разрядная Windows с совместимым установленным .NET Framework;
-- права чтения для источника и записи для назначения и portable-папки;
-- исходный и целевой пути в пределах стандартных ограничений используемой версии Windows.
+Для корректной работы требуются:
 
-Фактически проверенная матрица систем указывается в [release-information/v1.5.0.md](release-information/v1.5.0.md).
+- Windows 8.1 x64 – проверено;
+- Windows 10 x64 – проверено;
+- Windows 11 x64 – совместимость предусмотрена на уровне реализации, практическое тестирование не выполнялось;
+- Microsoft .NET Framework – системная платформа Windows.
 
-### Защита исходных данных
+Microsoft .NET Framework входит в состав Windows. LWAI-DataBackup проверен с .NET Framework 4.8 в Windows 8.1 и с .NET Framework 4.8.1 в Windows 10.
 
-Приложение использует источник только для чтения и не создаёт, не изменяет, не перемещает и не удаляет в нём объекты. Source и destination не могут совпадать, destination не может находиться внутри source, а опасные reparse-компоненты и перезапись существующего результата блокируются до записи.
+В Windows 11 совместимая версия .NET Framework установлена по умолчанию. Отдельная установка обычно не требуется.
 
-Во время операции приложение повторно проверяет прочитанные данные. Изменение, исчезновение, блокировка или неполное чтение обязательного файла прекращает задание без готового результата.
+Если Windows 8.1 или Windows 10 сообщает, что для запуска отсутствует необходимая версия .NET Framework, откройте официальную страницу Microsoft по ссылке ниже. Выберите «Download .NET Framework 4.8 Runtime», скачайте установщик, запустите его и завершите установку по инструкциям Microsoft:
+https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48
 
-### Приватность, поддержка и лицензия
+### Доступ к папкам
 
-Приложение работает локально без телеметрии, внешнего API, облачной синхронизации, серверной проверки лицензии и внешнего crash-reporting.
+Для выполнения резервного копирования и сохранения настроек необходимы:
 
-Подробности: [PRIVACY.md](PRIVACY.md), [SECURITY.md](SECURITY.md), [SUPPORT.md](SUPPORT.md), [LICENSE](LICENSE) и [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+- доступ на чтение к исходным данным;
+- доступ на запись к папке, в которой будет сохранена резервная копия;
+- право записи в папку с LWAI-DataBackup.exe; без него сохранение профилей, настроек и технического журнала невозможно.
+
+### Локальная работа и приватность
+
+Обработка данных выполняется локально. Телеметрия, внешний API, облачная синхронизация, серверная проверка лицензии и внешний сбор отчётов об ошибках в приложении отсутствуют. Сетевые пути используются только при прямом выборе пользователя и в пределах файловых разрешений Windows.
+
+### Лицензия и поддержка
+
+LWAI-DataBackup можно бесплатно использовать в личных, профессиональных и коммерческих целях. Распространение дистрибутива, перепродажа, передача третьим лицам, модификация, ребрендинг и замена логотипов запрещены. Полные условия использования приведены в LICENSE.txt.
+
+Сведения о приватности, безопасности и поддержке находятся в PRIVACY.txt, SECURITY.txt и SUPPORT.txt. Сторонние компоненты и их лицензии перечислены в THIRD_PARTY_NOTICES.txt и THIRD_PARTY_LICENSES.txt.
+
+Правообладатель: Life with AI
+Сайт: https://life-with-ai.ru
+Репозиторий: https://github.com/life-with-ai/LWAI-DataBackup
 
 ## English
 
-`LWAI-DataBackup` is a local portable Windows application for copying a selected folder or creating a ZIP archive with configurable exclusions, task profiles, and result verification.
+### Purpose
 
-### Download and run
+Backup of projects and working documents as a regular file copy or ZIP archive. A separate profile can be created for each project or workflow to retain paths to source data and the backup location, result format, exclusions, and additional options.
 
-- Portable ZIP: `LWAI-DataBackup-1.5.0-windows-x64-portable.zip`.
-- The checksum is published in [release-information/v1.5.0.md](release-information/v1.5.0.md).
-- Extract the ZIP to a separate folder and run `LWAI-DataBackup.exe`. No installation is required.
-- The EXE is not digitally signed. Windows may display its standard warning for a downloaded application.
+### Quick start
 
-Profiles and global settings are stored in `data-backups.config.json` next to the EXE. The distributed file contains no user paths or user profiles.
+1. Extract the ZIP archive containing LWAI-DataBackup to the desktop or another folder where your Windows account has write access.
+2. Open the extracted folder and run LWAI-DataBackup.exe. LWAI-DataBackup runs in portable mode and requires no installation.
+3. Specify the paths to the source data and the folder where the backup will be stored. Select a regular file copy or ZIP archive, configure exclusions if needed, and select "Start".
 
-### Profiles and global settings
+For the first launch, use the desktop or another user folder. Placing the files in a protected system folder may prevent profiles, settings, and the technical log from being saved.
 
-- Each profile stores the source, destination, copy or ZIP mode, exclusions, and additional options.
-- A profile can be created empty or from the saved settings of an existing profile, selected, renamed, deleted, and reordered.
-- The last selected profile is restored the next time the application starts.
-- The `Save profile` command writes the active profile manually.
-- Optional autosave writes text after focus leaves a field or 5 seconds after the last edit, while mode and options are saved after selection.
-- The `Settings` dialog controls theme, language, autosave, and the visibility of additional options.
-- Light and dark themes apply to all project-owned surfaces.
-- The Russian and English interfaces switch immediately; user paths and profile names are not translated.
+The EXE is not digitally signed. Windows may display its standard warning for a downloaded file on first launch.
 
-### Backup features
+### Profiles and settings
 
-- copy a selected folder into a separate directory;
-- create a ZIP archive;
-- exclude directories and files with wildcard patterns before excluded content is traversed;
-- control inclusion of the `backup` and `backups` directories separately;
-- calculate file count and size in advance and show progress, current stage, and a structured log;
-- warn about paths that exceed the standard Windows limit before creating a result;
-- cancel the operation or explicitly continue without the listed objects;
-- report a distinct completed-with-skips result with skipped file and directory counts;
-- keep an incomplete result as `.tmp` and publish the final name only after successful verification.
+A profile stores paths to source data and the backup location, result format, exclusion rules, and additional options. Profiles can be created, renamed, deleted, and arranged in a convenient order. The last selected profile is restored on the next launch.
 
-### System requirements
+LWAI-DataBackup profiles and settings are stored in config.json next to the EXE. This file also stores the theme, language, autosave mode, visibility of additional options, and window position. The config.json supplied in the package contains no user paths or user-created profiles.
 
-- 64-bit Windows with a compatible installed .NET Framework;
-- read access to the source and write access to the destination and portable folder;
-- source and destination paths within the standard limits of the Windows version in use.
+Manual saving with "Save profile" is used by default. Autosave can be enabled in "Settings" when needed. Text changes are written after focus leaves a field or 5 seconds after the last input; switches and options are saved immediately after selection.
 
-The verified operating system matrix is provided in [release-information/v1.5.0.md](release-information/v1.5.0.md).
+### Configuration compatibility
+
+The version 1.5.0 configuration is compatible with version 1.6.0. To transfer it, copy data-backups.config.json from the version 1.5.0 portable folder to the version 1.6.0 portable folder and rename the copy to config.json.
+
+### Backup
+
+The following capabilities are available:
+
+- creation of a regular file copy or ZIP archive;
+- separate lists of excluded directories, files, and wildcard patterns for each profile;
+- separate control over inclusion of the backup and backups directories;
+- preliminary file and size calculation with operation progress, current stage, and log;
+- warning about excessively long paths before a result is created;
+- cancellation of the operation or continuation without the objects listed in the warning;
+- distinct results for a fully completed operation and an operation completed with skipped objects;
+- result name uniqueness control with an automatically added safe suffix on collision.
 
 ### Source data protection
 
-The application uses the source for reading only and does not create, modify, move, or delete objects in it. Source and destination cannot be the same, destination cannot be inside source, and unsafe reparse components and overwriting an existing result are blocked before writing.
+LWAI-DataBackup uses source data exclusively in read-only mode.
 
-During an operation, the application verifies the data it reads again. A required file that changes, disappears, becomes locked, or cannot be read completely ends the task without publishing a completed result.
+Source data and backup folder availability is checked only for the selected profile after "Start". Waiting for a network path does not block the interface.
 
-### Privacy, support, and license
+The result is first created under a temporary name and receives its final name only after successful verification. A normal cancellation removes the unfinished temporary result. An unexpected process, Windows, or power failure may leave a temporary object only in the backup folder. It is not resumed automatically, so start the operation again.
 
-The application works locally without telemetry, an external API, cloud synchronization, server-side license checks, or external crash reporting.
+### Technical log
 
-See [PRIVACY.md](PRIVACY.md), [SECURITY.md](SECURITY.md), [SUPPORT.md](SUPPORT.md), [LICENSE](LICENSE), and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Recording events in the technical log is disabled by default. It can be enabled in the additional profile options. Records are stored in the logs folder next to the EXE and may contain paths and file names. The contents of backed-up files are not written to the log.
 
-Life with AI – [life-with-ai.ru](https://life-with-ai.ru)
+### System requirements
+
+The following are required for correct operation:
+
+- Windows 8.1 x64 – tested;
+- Windows 10 x64 – tested;
+- Windows 11 x64 – compatibility is addressed at the implementation level, practical testing has not been performed;
+- Microsoft .NET Framework – the Windows runtime platform required to launch LWAI-DataBackup.
+
+Microsoft .NET Framework is included with Windows. LWAI-DataBackup has been tested with .NET Framework 4.8 on Windows 8.1 and with .NET Framework 4.8.1 on Windows 10.
+
+A compatible version of .NET Framework is included with Windows 11 by default. A separate installation is not normally required.
+
+If Windows 8.1 or Windows 10 reports that the required version of .NET Framework is missing, open the official Microsoft page using the link below. Select "Download .NET Framework 4.8 Runtime", download and run the installer, and complete the installation by following Microsoft's instructions:
+https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48
+
+### Folder access
+
+The following access is required to create backups and save settings:
+
+- read access to the source data;
+- write access to the folder where the backup will be stored;
+- write access to the folder containing LWAI-DataBackup.exe; without it, profiles, settings, and the technical log cannot be saved.
+
+### Local operation and privacy
+
+Data is processed locally. There is no telemetry, external API, cloud synchronization, server-side license check, or external collection of error reports. Network paths are used only when selected directly by the user and only within Windows file permissions.
+
+### License and support
+
+LWAI-DataBackup may be used free of charge for personal, professional, and commercial purposes. Distribution of the package, resale, transfer to third parties, modification, rebranding, and logo replacement are prohibited. Full terms of use are provided in LICENSE.txt.
+
+Privacy, security, and support information is provided in PRIVACY.txt, SECURITY.txt, and SUPPORT.txt. Third-party components and licenses are listed in THIRD_PARTY_NOTICES.txt and THIRD_PARTY_LICENSES.txt.
+
+Copyright holder: Life with AI
+Website: https://life-with-ai.ru
+Repository: https://github.com/life-with-ai/LWAI-DataBackup
